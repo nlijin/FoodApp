@@ -4,18 +4,20 @@
 }
 
 body {
-  background-color: #fffdf9;
+  background-color: darkcyan;
 }
 
 .header {
   display: flex;
   justify-content: space-between;
-  /* background-color: antiquewhite; */
+  background-color: teal;
+  font-size: 1.5rem;
+  color: chocolate;
 }
 
 .header > .logo-container > img {
   width: 130px;
-  border: solid 1px gray;
+  border-radius: 50%;
 }
 
 .header > .nav-container {
@@ -26,17 +28,15 @@ body {
 
 .header > .nav-container > li {
   margin: 10px;
-  color: chocolate;
 }
 
 .search-container {
   margin: 5px auto;
-  /* background-color: antiquewhite; */
   text-align: end;
 }
 
 .search-input {
-  border: 2px solid gray;
+  /* border: 2px solid gray; */
   margin: 15px;
   padding: 10px;
   width: 300px;
@@ -47,11 +47,12 @@ body {
   flex-wrap: wrap;
   gap: 1.5rem;
   justify-content: space-around;
+  margin: 10px 0;
 }
 
 .card-container {
   width: 300px;
-  background-color: #beebe9;
+  background-color: #b2c2bf;
 }
 
 .card-container > .img-container > img {
@@ -61,7 +62,8 @@ body {
 }
 
 .footer {
-  /* background-color: aqua; */
   padding: 20px;
   text-align: center;
+  background-color: #3b3a30;
+  color: aliceblue;
 }

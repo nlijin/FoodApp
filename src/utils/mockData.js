@@ -1,7 +1,4 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
-
-const resData = [
+const mockData = [
   {
     info: {
       id: "221738",
@@ -2348,72 +2345,4 @@ const resData = [
   },
 ];
 
-const Header = () => (
-  <div className="header">
-    <div className="logo-container">
-      <img
-        src="https://img.freepik.com/free-vector/food-shopping-logo-template-design_460848-10299.jpg"
-        alt="company logo"
-      />
-    </div>
-
-    <ul className="nav-container">
-      <li>Home</li>
-      <li>Contact us</li>
-      <li>Address</li>
-      <li>About us</li>
-    </ul>
-  </div>
-);
-
-const SearchBar = () => (
-  <form className="search-container">
-    <label>
-      Search:
-      <input type="text" name="Search" className="search-input" />
-    </label>
-  </form>
-);
-
-const RestaurantCard = ({ resList }) => (
-  <div className="card-container">
-    <div className="img-container">
-      <img
-        src={`https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/${resList.info.cloudinaryImageId}`}
-        alt="food photo"
-      />
-    </div>
-    <div className="res-details">
-      <h3>{resList.info.name}</h3>
-      <h4>{resList.info.avgRating}</h4>
-      <h4>{resList.info.locality}</h4>
-      <h4>{resList.info.areaName}</h4>
-    </div>
-  </div>
-);
-
-const ResBody = () => (
-  <div className="res-body">
-    {resData.map((restaurant) => (
-      <RestaurantCard key={restaurant.info.id} resList={restaurant} />
-    ))}
-  </div>
-);
-
-const Footer = () => (
-  <div className="footer">
-    <h3>Copyright 2023</h3>
-  </div>
-);
-
-const AppLayout = () => (
-  <div>
-    <Header />
-    <SearchBar />
-    <ResBody />
-    <Footer />
-  </div>
-);
-const root = ReactDOM.createRoot(document.getElementById("root"));
-
-root.render(<AppLayout />);
+export default mockData;
