@@ -54,10 +54,11 @@ body {
   padding: 15px;
   margin: 10px;
   background-color: greenyellow;
-  border-radius: 10%;
+  border-radius: 5%;
   font-size: 1rem;
   color: gray;
   border: none;
+  font-weight: bold;
 }
 
 .card-container {

@@ -11,7 +11,7 @@ const ResBody = () => {
         className="filter-btn"
         onClick={() => {
           const filteredArray = listOfRestaurants.filter((restaurant) => {
-            return restaurant.info.avgRating > 4;
+            return restaurant.info.avgRating > 4.2;
           });
           setListOfRestaurants(filteredArray);
         }}
