@@ -78,3 +78,20 @@ body {
   background-color: #3b3a30;
   color: aliceblue;
 }
+
+.shimmer-card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: space-around;
+}
+
+.shimmer-card {
+  width: 300px;
+  background-color: #f0f0f0;
+}
+
+.shimmer-card > .shimmer-img-container > img {
+  width: 300px;
+  height: 300px;
+}

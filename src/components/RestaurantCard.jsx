@@ -12,7 +12,7 @@ const RestaurantCard = ({ resList }) => {
       <div className="res-details">
         <h3>{name}</h3>
         <p>{cuisines.join(" ")}</p>
-        <p>{avgRating}</p>
+        <p>Rating - {avgRating}</p>
         <p>{locality}</p>
         <p>{areaName}</p>
       </div>
