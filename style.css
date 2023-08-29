@@ -120,6 +120,14 @@ body {
   font-size: 4rem;
 }
 
+.help {
+  display: flex;
+  margin: 10px;
+  justify-content: center;
+  color: rgb(80, 220, 45);
+  font-size: 4rem;
+}
+
 .error-page {
   /* display: flex; */
   margin: 10px;
