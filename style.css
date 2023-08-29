@@ -30,6 +30,12 @@ body {
   margin: 10px;
 }
 
+.header > .nav-container > li > a {
+  text-decoration: none;
+  margin: 10px;
+  color: floralwhite;
+}
+
 .search-container {
   margin: 5px auto;
   text-align: end;
