@@ -141,3 +141,22 @@ body {
   color: rgb(80, 220, 45);
   font-size: 4rem;
 }
+
+.menu > h2 {
+  font-size: 3rem;
+}
+.menu > h3 {
+  font-size: 2rem;
+}
+
+.menu > ul {
+  font-size: 2rem;
+}
+
+.menu > li {
+  font-size: 1.5rem;
+}
+
+/* .menu > li {
+  font-size: 1.2rem;
+} */
