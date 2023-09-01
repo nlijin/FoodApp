@@ -111,11 +111,21 @@ body {
 }
 
 .about {
-  display: flex;
+  /* display: flex; */
   margin: 10px;
-  justify-content: center;
+  /* justify-content: center; */
   color: rgb(80, 220, 45);
-  font-size: 4rem;
+  font-size: 3rem;
+}
+
+.user-card {
+  border: #3b3a30 solid 2px;
+  width: 550px;
+  padding: 15px;
+  margin: 10px;
+  border-radius: 15px;
+  background-color: #3b3a30;
+  color: whitesmoke;
 }
 
 .contact {
@@ -142,21 +152,14 @@ body {
   font-size: 4rem;
 }
 
-.menu > h2 {
-  font-size: 3rem;
-}
-.menu > h3 {
+.menu {
   font-size: 2rem;
 }
 
-.menu > ul {
-  font-size: 2rem;
-}
-
-.menu > li {
+.user-card > p > button {
+  padding: 5px;
+  background-color: azure;
+  border-radius: 10px;
   font-size: 1.5rem;
+  border: none;
 }
-
-/* .menu > li {
-  font-size: 1.2rem;
-} */
