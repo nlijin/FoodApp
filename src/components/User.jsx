@@ -1,9 +1,14 @@
 import { useState } from "react";
+import useStatusOnline from "../utils/useStatusOnline";
 const User = ({ name, phone, email, comptype }) => {
   const [count] = useState(0);
   const [count2] = useState(1);
+
+  const onlineStatus = useStatusOnline();
+
   return (
     <div className="user-card">
+      <h2>{onlineStatus ? "you are online" : "you are offline"}</h2>
       <p>Component: {comptype} </p>
       <p>Name: {name}</p>
       <p>Phone: {phone}</p>
