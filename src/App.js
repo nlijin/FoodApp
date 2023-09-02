@@ -10,6 +10,9 @@ import Contact from "./components/Contact";
 import Help from "./components/Help";
 import Error from "./components/Error";
 import ResMenu from "./components/ResMenu";
+import { lazy, Suspense } from "react";
+
+const Groceries = lazy(() => import("./components/Groceries"));
 
 const AppLayout = () => {
   return (
@@ -46,6 +49,14 @@ const appRouter = createBrowserRouter([
       {
         path: "restaurant/:resId",
         element: <ResMenu />,
+      },
+      {
+        path: "groceries/",
+        element: (
+          <Suspense fallback={<h1>Groceries component is loading...</h1>}>
+            <Groceries />
+          </Suspense>
+        ),
       },
     ],
     errorElement: <Error />,

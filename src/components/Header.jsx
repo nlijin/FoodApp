@@ -14,6 +14,9 @@ const Header = () => {
       <ul className="nav-container">
         <li>{onlineStatus ? "Status: Online" : "Status: offline"}</li>
         <li>
+          <Link to="/groceries"> Groceries </Link>
+        </li>
+        <li>
           <Link to="/"> Home </Link>
         </li>
         <li>
