@@ -18,13 +18,13 @@ const ResMenu = () => {
   const { name, cuisines } = resInfo.cards[0].card.card.info;
 
   return (
-    <div className="menu">
-      <h2>{name}</h2>
-      <h3>{cuisines.join(", ")}</h3>
-      <h3>Menu items</h3>
-      <ul>
+    <div className="mx-10">
+      <h2 className="font-bold text-4xl mb-1">{name}</h2>
+      <h3 className="text-2xl mb-8">{cuisines.join(", ")}</h3>
+      <ul className="">
+        <h3 className="text-2xl mb-2">Menu items</h3>
         {itemCards.map((item) => (
-          <li key={item.card.info.id}>
+          <li className="mb-2 text-blue-500" key={item.card.info.id}>
             {item.card.info.name}
             {": Rs - "}
             {item.card.info.price / 100}

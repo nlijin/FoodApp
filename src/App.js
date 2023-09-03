@@ -2,7 +2,6 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 import Header from "./components/Header";
-import SearchBar from "./components/SearchBar";
 import ResBody from "./components/ResBody";
 import Footer from "./components/Footer";
 import About from "./components/About";
@@ -16,9 +15,9 @@ const Groceries = lazy(() => import("./components/Groceries"));
 
 const AppLayout = () => {
   return (
-    <div>
+    <div className="">
       <Header />
-      <SearchBar />
+      {/* <SearchBar /> */}
       <Outlet />
       <Footer />
     </div>

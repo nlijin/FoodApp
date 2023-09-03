@@ -41,22 +41,40 @@ const ResBody = () => {
   if (listOfRestaurants === null) return <Shimmer />;
 
   return (
-    <div className="resbody-container">
-      <label>
-        Search:
-        <input
-          type="text"
-          name="Search"
-          className="search-input"
-          value={searchText}
-          onChange={(e) => setSearchText(e.target.value)}
-        />
-      </label>
-      <button onClick={handleSearch}>Search</button>
-      <button className="filter-btn" onClick={handleTopRatedFilter}>
-        Top rated restaurants
-      </button>
-      <div className="res-body">
+    <div className="">
+      <div class="flex justify-between items-center bg-gray-100 p-5">
+        <div class="flex">
+          <input
+            type="search"
+            class="relative m-0 -mr-0.5 w-48 min-w-0 flex-auto rounded-l border border-solid border-neutral-300 bg-transparent bg-clip-padding px-3 py-[0.25rem] text-base font-normal leading-[1.6] text-neutral-700 outline-none transition duration-200 ease-in-out focus:z-[3] focus:border-primary focus:text-neutral-700 focus:shadow-[inset_0_0_0_1px_rgb(59,113,202)] focus:outline-none dark:border-neutral-600 dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:focus:border-primary"
+            placeholder="Search"
+            aria-label="Search"
+            aria-describedby="button-addon1"
+            value={searchText}
+            onChange={(e) => setSearchText(e.target.value)}
+          />
+          {/*  Search button  */}
+          <button
+            class="flex items-center rounded-r bg-blue-400 px-6 py-4 text-xs font-medium uppercase leading-tight text-black shadow-md transition duration-150 ease-in-out hover:bg-blue-500 hover:shadow-lg focus:bg-primary-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-300 active:shadow-lg"
+            type="button"
+            id="button-addon1"
+            data-te-ripple-init
+            data-te-ripple-color="light"
+            onClick={handleSearch}
+          >
+            Search
+          </button>
+        </div>
+        <div>
+          <button
+            className="flex items-center rounded-r bg-blue-400 px-6 py-4 text-xs font-medium uppercase leading-tight text-black shadow-md transition duration-150 ease-in-out hover:bg-blue-500 hover:shadow-lg focus:bg-primary-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-300 active:shadow-lg"
+            onClick={handleTopRatedFilter}
+          >
+            Top rated
+          </button>
+        </div>
+      </div>
+      <div className="flex gap-3 flex-wrap bg-white justify-center">
         {filteredRestaurant.map((restaurant) => (
           <Link
             key={restaurant.info.id}
