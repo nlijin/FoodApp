@@ -35,7 +35,7 @@ const RestaurantCard = ({ resList }) => {
 
 export const WithPromotedLabel = (RestaurantCard) => {
   return (props) => (
-    <div>
+    <div className="">
       <label className="absolute px-4 py-2 bg-green-500 text-black z-10 ml-5">
         discount: {props.resList.info.aggregatedDiscountInfoV3.header}
       </label>

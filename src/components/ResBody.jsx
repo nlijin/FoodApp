@@ -21,7 +21,6 @@ const ResBody = () => {
 
     const { restaurants } =
       json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle;
-    // json?.data?.cards[5]?.card?.card?.gridElements?.infoWithStyle;
 
     setListOfRestaurants(restaurants);
     setFilteredRestaurant(restaurants);
@@ -82,7 +81,7 @@ const ResBody = () => {
             key={restaurant.info.id}
             to={`/restaurant/${restaurant.info.id}`}
           >
-            {restaurant.info.aggregatedDiscountInfoV3.header ? (
+            {restaurant?.info?.aggregatedDiscountInfoV3?.header ? (
               <RestaurantCardDiscounted resList={restaurant} />
             ) : (
               <RestaurantCard resList={restaurant} />
