@@ -1,15 +1,8 @@
 import { REST_IMAGES } from "../utils/constants";
 
 const RestaurantCard = ({ resList }) => {
-  const {
-    cloudinaryImageId,
-    name,
-    avgRating,
-    cuisines,
-    locality,
-    areaName,
-    aggregatedDiscountInfoV3,
-  } = resList?.info;
+  const { cloudinaryImageId, name, avgRating, cuisines, locality, areaName } =
+    resList?.info;
 
   return (
     <div className="w-72 m-5 block rounded-lg duration-200 hover:scale-105 bg-sky-50 hover:bg-slate-200 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.06)] dark:bg-neutral-700">

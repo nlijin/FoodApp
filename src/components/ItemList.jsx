@@ -3,7 +3,7 @@ import { REST_IMAGES } from "../utils/constants.js";
 const ItemList = ({ items }) => {
   return items.map((item) => (
     <div
-      className="flex justify-between text-left my-2 border-gray-200 border-b-2 p-4 bg-gray-200"
+      className="flex justify-between text-left border-gray-200 border-b-2 p-4 bg-gray-100 items-center"
       key={item.card.info.id}
     >
       <div className="w-10/12">
