@@ -6,21 +6,26 @@ import ResBody from "./components/ResBody";
 import Footer from "./components/Footer";
 import About from "./components/About";
 import Contact from "./components/Contact";
+import Cart from "./components/Cart";
 import Help from "./components/Help";
 import Error from "./components/Error";
 import ResMenu from "./components/ResMenu";
 import { lazy, Suspense } from "react";
+import { Provider } from "react-redux";
+import appStore from "./utils/appStore";
 
 const Groceries = lazy(() => import("./components/Groceries"));
 
 const AppLayout = () => {
   return (
-    <div className="">
-      <Header />
-      {/* <SearchBar /> */}
-      <Outlet />
-      <Footer />
-    </div>
+    <Provider store={appStore}>
+      <div className="">
+        <Header />
+        {/* <SearchBar /> */}
+        <Outlet />
+        <Footer />
+      </div>
+    </Provider>
   );
 };
 
@@ -44,6 +49,10 @@ const appRouter = createBrowserRouter([
       {
         path: "/help",
         element: <Help />,
+      },
+      {
+        path: "/cart",
+        element: <Cart />,
       },
       {
         path: "restaurant/:resId",

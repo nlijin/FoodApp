@@ -6,7 +6,7 @@ const RestaurantCategory = ({ data, showItems, toggleAccordion }) => {
   return (
     <div className="">
       {/* {Accordion Header} */}
-      <div className="w-6/12 mx-auto my-2 bg-gray-200 shadow-lg">
+      <div className="w-6/12 mx-auto my-3 bg-gray-100 shadow-md">
         <div
           className="flex justify-between px-4 items-center cursor-pointer"
           onClick={toggleAccordion}
