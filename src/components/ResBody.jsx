@@ -18,9 +18,6 @@ const ResBody = () => {
   const fetchData = async () => {
     const data = await fetch(RESTAURANTS_URL);
     const json = await data.json();
-    console.log(json);
-
-    console.log();
 
     const { restaurants } =
       json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle;
